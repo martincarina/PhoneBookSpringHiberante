@@ -12,17 +12,14 @@ public interface GenericDao<T, PK extends Serializable> {
     @Transactional
     void saveOrUpdate(T obj);
 
-    @Transactional
-    void delete(PK id);
-
     T getById(PK id);
 
-    List<T> findAllByMulti(Map<String, Object> condition);
+    List<T> findAllByMulti(Map<String, Object> condition, String name, boolean value);
 
     @Transactional
-    List<T> findAll();
+    List<T> findAll(String name, boolean value);
 
     @Transactional
     @SuppressWarnings("unchecked")
-    List<T> findAll(Order order);
+    List<T> findAll(Order order, String name, boolean value);
 }

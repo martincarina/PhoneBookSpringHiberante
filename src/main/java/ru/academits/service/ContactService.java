@@ -61,15 +61,9 @@ public class ContactService {
     }
 
     public void removeContacts(String[] ids) {
-        System.out.println("OK");
         for (String id : ids) {
             int idToDelete = Integer.parseInt(id);
             contactDao.remove(idToDelete);
         }
-  /*      List<Contact> contactList = getAllContacts();
-        for (String id : ids) {
-            int idToDelete = Integer.parseInt(id);
-            contactList.removeIf(contact -> contact.getId() == idToDelete);
-        }*/
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class Scheduler {
 
     @Scheduled(fixedRate = 10000)
-    public void sendEmailWithContactList(){
+    public void sendEmailWithContactList() {
         System.out.println("schedule");
     }
 }

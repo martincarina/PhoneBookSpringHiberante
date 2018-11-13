@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
-//public class ContactDaoImpl extends GenericDaoImpl<Contact, Long> implements ContactDao {
-    public class ContactDaoImpl extends GenericDaoImpl<Contact, Integer> implements ContactDao {
+public class ContactDaoImpl extends GenericDaoImpl<Contact, Integer> implements ContactDao {
 
     public ContactDaoImpl() {
         super(Contact.class);
@@ -17,7 +16,9 @@ import java.util.Map;
 
     @Override
     public List<Contact> getAllContacts() {
-        return findAll();
+        String name = "removed";
+        boolean value = false;
+        return findAll(name, value);
     }
 
     @Override
@@ -27,13 +28,19 @@ import java.util.Map;
 
     @Override
     public void remove(int id) {
-        delete(id);
+        //delete(id);
+        Contact contactToDelete = getById(id);
+        contactToDelete.setRemoved();
+        saveOrUpdate(contactToDelete);
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<Contact> findByPhone(String phone) {
         Map condition = new HashMap<String, Object>();
         condition.put("phone", phone);
-        return findAllByMulti(condition);
+        String name = "removed";
+        boolean value = false;
+        return findAllByMulti(condition, name, value);
     }
 }

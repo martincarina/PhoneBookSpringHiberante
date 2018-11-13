@@ -3,6 +3,9 @@ package ru.academits.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import ru.academits.converter.ContactDtoToContactConverter;
+import ru.academits.converter.ContactToContactDtoConverter;
+import ru.academits.dto.ContactDto;
 import ru.academits.model.Contact;
 import ru.academits.model.ContactValidation;
 import ru.academits.service.ContactService;
@@ -20,17 +23,24 @@ public class PhoneBookController {
     @Autowired
     private ContactService contactService;
 
+    @Autowired
+    private ContactToContactDtoConverter contactToContactDtoConverter;
+
+    @Autowired
+    private ContactDtoToContactConverter contactDtoToContactConverter;
+
     @RequestMapping(value = "getAllContacts", method = RequestMethod.GET)
     @ResponseBody
-    public List<Contact> getAllContacts() {
+    public List<ContactDto> getAllContacts() {
         logger.info("called method getAllContacts");
-        return contactService.getAllContacts();
+        return contactToContactDtoConverter.convert(contactService.getAllContacts());
     }
 
     @RequestMapping(value = "addContact", method = RequestMethod.POST)
     @ResponseBody
-    public ContactValidation addContact(@RequestBody Contact contact) {
-        return contactService.addContact(contact);
+    public ContactValidation addContact(@RequestBody ContactDto contact) {
+        Contact contactEntity = contactDtoToContactConverter.convert(contact);
+        return contactService.addContact(contactEntity);
     }
 
     @RequestMapping(value = "removeContacts", method = RequestMethod.POST)
