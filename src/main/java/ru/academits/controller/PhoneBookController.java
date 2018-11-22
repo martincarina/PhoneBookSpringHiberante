@@ -39,6 +39,10 @@ public class PhoneBookController {
     @RequestMapping(value = "addContact", method = RequestMethod.POST)
     @ResponseBody
     public ContactValidation addContact(@RequestBody ContactDto contact) {
+        logger.info("called method addContact");
+        String requestBody = "request body: first name = " + contact.getFirstName()
+                + " last name = " + contact.getLastName() + " phone = " + contact.getPhone();
+        logger.info(requestBody);
         Contact contactEntity = contactDtoToContactConverter.convert(contact);
         return contactService.addContact(contactEntity);
     }
@@ -46,6 +50,9 @@ public class PhoneBookController {
     @RequestMapping(value = "removeContacts", method = RequestMethod.POST)
     @ResponseBody
     public void removeContacts(@RequestParam("ids[]") String[] ids) {
+        logger.info("called method removeContacts");
+        String requestParam = "request parameters: Ids = " + java.util.Arrays.toString(ids);
+        logger.info(requestParam);
         contactService.removeContacts(ids);
     }
 }
