@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b9b29fc8-c406-483b-b5da-fad302f375b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/academits/dao/ContactDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/academits/dao/ContactDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/academits/hello/HelloWorldController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/academits/shedule/Scheduler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,14 +17,14 @@
         <counts>
           <entry key="html" value="14" />
           <entry key="md" value="50" />
-          <entry key="txt" value="20" />
+          <entry key="txt" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="14" />
           <entry key="Markdown" value="50" />
-          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="PLAIN_TEXT" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -63,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="136">
+              <first_editor relative-caret-position="98">
                 <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               </first_editor>
               <second_editor />
@@ -204,7 +199,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543302786936" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543303307371" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../phonebookspring" />
   </component>
   <component name="RunDashboard">
@@ -278,7 +273,7 @@
       <workItem from="1540976816611" duration="34586000" />
       <workItem from="1542358723350" duration="12056000" />
       <workItem from="1543210495554" duration="2576000" />
-      <workItem from="1543298306022" duration="4348000" />
+      <workItem from="1543298306022" duration="4900000" />
     </task>
     <task id="LOCAL-00001" summary="изменен .gitignore">
       <created>1543212396308</created>
@@ -287,12 +282,12 @@
       <option name="project" value="LOCAL" />
       <updated>1543212396308</updated>
     </task>
-    <task id="LOCAL-00002" summary="Настроено логирование">
-      <created>1542867646143</created>
+    <task id="LOCAL-00002" summary="Удаление неиспользуемого кода">
+      <created>1543302978375</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1542867646143</updated>
+      <updated>1543302978375</updated>
     </task>
     <task id="LOCAL-00003" summary="Изменено логирование API-методов">
       <created>1543212061618</created>
@@ -308,15 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543212110432</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5458000" />
+    <option name="totallyTimeSpent" value="6010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28366113" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -363,7 +357,8 @@
     <MESSAGE value="Настроено логирование" />
     <MESSAGE value="Изменено логирование API-методов" />
     <MESSAGE value="изменен .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="изменен .gitignore" />
+    <MESSAGE value="Удаление неиспользуемого кода" />
+    <option name="LAST_COMMIT_MESSAGE" value="Удаление неиспользуемого кода" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -521,7 +516,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="136">
+          <first_editor relative-caret-position="98">
             <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           </first_editor>
           <second_editor />
