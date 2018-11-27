@@ -28,7 +28,6 @@ public class ContactDaoImpl extends GenericDaoImpl<Contact, Integer> implements 
 
     @Override
     public void remove(int id) {
-        //delete(id);
         Contact contactToDelete = getById(id);
         contactToDelete.setRemoved();
         saveOrUpdate(contactToDelete);
